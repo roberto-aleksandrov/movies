@@ -1,0 +1,13 @@
+using System.Collections.Generic;
+
+namespace Movies.Application.Common.Models.Mediatr
+{
+    public class UserInfo
+    {
+        public bool Authenticated { get; set; }
+
+        public string Username { get; set; }
+
+        public IEnumerable<string> Roles { get; set; }
+    }
+}
