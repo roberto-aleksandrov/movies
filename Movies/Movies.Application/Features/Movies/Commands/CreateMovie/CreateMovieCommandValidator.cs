@@ -17,9 +17,6 @@ namespace Movies.Application.Features.Movies.Commands.CreateMovie
             RuleFor(n => n.GenreIds)
                 .NotEmpty()
                 .HasUnique(n => n);
-
-            RuleFor(n => n.Image)
-                .ima
         }
     }
 }

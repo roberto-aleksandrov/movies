@@ -1,0 +1,17 @@
+.photo-search-bar-row {
+    position: sticky;
+    top: 0%;
+    background-color: white;
+    padding: 35px;
+    z-index: 1;
+}
+
+.photo-search-bar-row form { 
+    position: absolute;
+    right: 5%;
+    top: 38%;
+}
+
+.photo-card-body div {
+    word-break: break-all;
+}

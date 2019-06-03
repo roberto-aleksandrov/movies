@@ -21,7 +21,7 @@ namespace Movies.Application.Features.Movies.Queries.GetMovies
         {
             var spec = _mapper.Map<BaseSpecification<MovieEntity>>(request);
 
-            var movieEntities = await _data.Movies.ListAllAsync();
+            var movieEntities = await _data.Movies.ListAsync(spec);
 
             return _mapper.Map<IEnumerable<MovieDto>>(movieEntities);
         }

@@ -1,0 +1,26 @@
+.movie-card .card-title {
+    height: 25px;
+    font-size: small;
+}
+
+.movie-card .card {
+    height: 100%;
+}
+
+.movie-card {
+    padding-top: 3%
+}
+
+.movie-card-body div {
+    height: 70px;
+}
+
+.movie-card-tags {
+    border-top: solid 1px lightgray;
+    padding-top: 3%;
+    margin-top: 3%;
+}
+
+.delete-movie-button {
+    float: right;
+}

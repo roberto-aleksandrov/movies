@@ -39,7 +39,7 @@ namespace Movies.Infrastructure.Mediator
             }
         }
 
-        public async Task<TResponse> Send<TResponse>(BaseQuery<TResponse> request)
+        public async Task<TResponse> Send<TResponse>(IRequest<TResponse> request)
         {
             return await _mediator.Send(request);
         }

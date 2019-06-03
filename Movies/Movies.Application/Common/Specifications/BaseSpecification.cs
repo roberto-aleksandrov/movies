@@ -32,7 +32,7 @@ namespace Movies.Application.Common.Spcifications
 
         public int Skip { get; set; }
 
-        public bool isPagingEnabled { get; private set; } = false;
+        public bool isPagingEnabled { get; set; }
 
         public bool IncludeUncommited { get; set; } = false;
 

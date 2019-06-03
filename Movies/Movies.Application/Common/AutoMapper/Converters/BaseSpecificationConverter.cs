@@ -3,6 +3,7 @@ using Movies.Application.Common.Models.Mediatr;
 using Movies.Application.Common.Spcifications;
 using Movies.Domain.Entities;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Movies.Application.Common.AutoMapper.Converters
@@ -14,7 +15,13 @@ namespace Movies.Application.Common.AutoMapper.Converters
         {
             return new BaseSpecification<T>
             {
-                IncludeStrings = source.Include?.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)?.ToList()
+                Skip = source.Skip ?? 0,
+                Take = source.Take ?? 0,
+                isPagingEnabled = source.Skip != null || source.Take != null,
+                IncludeStrings = source
+                    .Include?
+                    .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)?
+                    .ToList() ?? new List<string>()
             };
         }
     }

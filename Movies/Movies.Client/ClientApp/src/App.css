@@ -1,0 +1,12 @@
+.content {
+    position:absolute;
+    top: 50px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow-y: auto;
+}
+
+.react-icons {
+    vertical-align: middle;
+  }

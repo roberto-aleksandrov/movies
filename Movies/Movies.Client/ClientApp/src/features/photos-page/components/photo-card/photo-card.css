@@ -1,0 +1,22 @@
+.photo-card .card-title {
+    height: 25px;
+    font-size: small;
+}
+
+.photo-card .card {
+    height: 100%;
+}
+
+.photo-card {
+    padding-top: 3%
+}
+
+.photo-card-body div {
+    height: 70px;
+}
+
+.photo-card-tags {
+    border-top: solid 1px lightgray;
+    padding-top: 3%;
+    margin-top: 3%;
+}

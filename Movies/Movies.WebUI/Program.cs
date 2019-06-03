@@ -17,8 +17,8 @@ namespace Movies.WebUI
                 try
                 {
                     var context = scope.ServiceProvider.GetService<MoviesContext>();
-                    context.Database.EnsureCreated();
-                    MoviesInitializer.Initialize(context);
+                    //context.Database.EnsureCreated();
+                    //MoviesInitializer.Initialize(context);
                 }
                 catch (Exception e)
                 {

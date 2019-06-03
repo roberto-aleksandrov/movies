@@ -1,0 +1,16 @@
+.upsert-movie-form .alert {
+    padding: 1%;
+    color: red;
+}
+
+.upsert-movie-card {
+    padding: 0 !important;
+}
+
+.upsert-movie-form .react-datepicker-wrapper, .upsert-movie-form .react-datepicker__input-container {
+    width: 100%;
+}
+
+.movie-image-input {
+    height: 100% !important;
+}

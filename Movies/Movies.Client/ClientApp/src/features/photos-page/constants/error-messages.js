@@ -1,0 +1,1 @@
+export const GET_PHOTOS_FAILURE_MESSAGE = 'Failed to fetch photos!';

@@ -4,8 +4,8 @@ namespace Movies.Application.Common.Models.Mediatr
     {
         public string Include { get; set; }
 
-        //public int? Take { get; set; }
+        public int? Take { get; set; }
 
-        //public int? Skip { get; set; }        
+        public int? Skip { get; set; }
     }
 }
