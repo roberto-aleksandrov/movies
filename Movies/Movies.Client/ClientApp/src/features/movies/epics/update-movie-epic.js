@@ -2,6 +2,7 @@ import { ofType } from 'redux-observable';
 import { mergeMap, debounceTime } from 'rxjs/operators';
 import { merge, of } from 'rxjs';
 import { push } from 'connected-react-router';
+import moment from 'moment';
 
 import { UPDATE_MOVIE } from '../types';
 import { updateMoviePending, updateMovieFulfilled, updateMovieRejected } from '../actions';
@@ -26,7 +27,7 @@ const requestPayload = ({id, ...data}) => ({
     url: `movies/update/${id}`,
     onSuccess,
     onError,
-    data: {...data,  releaseDate: new Date(data.releaseDate).toLocaleDateString()}
+    data: {...data,  releaseDate: moment(data.releaseDate)}
 });
 
 const requestMeta = { api: 'formDataApi' };

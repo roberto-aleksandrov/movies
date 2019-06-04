@@ -10,17 +10,12 @@ import { getMoviesPending
     getMovieFulfilled,
     getMovieRejected } from '../actions';
 import { sendApiRequest } from '../../../actions';
-import { notifyError, notifyWarning } from '../../../actions';
-
-const warnIfNoMovies = response => 
-    response.data.length === 0 
-    ? notifyWarning('There are no created movies!')
-    : getMoviesFulfilled(response)
+import { notifyError } from '../../../actions';
 
 const getMovieRequestPayload = payload => ({
     method: 'get',
     url: 'movies/getall',
-    onSuccess: [warnIfNoMovies],
+    onSuccess: [getMoviesFulfilled],
     onError: [getMoviesRejected, notifyError],
     data: payload
 });
