@@ -1,3 +1,3 @@
 export const apiConfig = {
-    baseUrl: 'https://moviesapp12.azurewebsites.net',
+    baseUrl: 'https://moviesapp12.azurewebsites.net/api',
 };
