@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26228.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{36010238-9224-44C7-BFB7-050CD0981F82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.WebUI", "Movies.WebUI\Movies.WebUI.csproj", "{3BFF401E-5564-4983-80CC-225299D2D66E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9AF3FB30-278E-45E0-B6E5-D750AA327E66}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Persistance", "Movies.Persistance\Movies.Persistance.csproj", "{A7EFB463-6882-4917-9095-ED4D917D1EC8}"
@@ -27,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{BA1BC4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Client", "Movies.Client\Movies.Client.csproj", "{8FD3644C-A491-4924-A053-603812246168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.API", "Movies.API\Movies.API.csproj", "{9999E610-ABC0-4392-97EB-7F4205608EB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.API", "Movies.API\Movies.API.csproj", "{9999E610-ABC0-4392-97EB-7F4205608EB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3BFF401E-5564-4983-80CC-225299D2D66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BFF401E-5564-4983-80CC-225299D2D66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BFF401E-5564-4983-80CC-225299D2D66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BFF401E-5564-4983-80CC-225299D2D66E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7EFB463-6882-4917-9095-ED4D917D1EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7EFB463-6882-4917-9095-ED4D917D1EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7EFB463-6882-4917-9095-ED4D917D1EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -72,7 +66,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3BFF401E-5564-4983-80CC-225299D2D66E} = {36010238-9224-44C7-BFB7-050CD0981F82}
 		{A7EFB463-6882-4917-9095-ED4D917D1EC8} = {9AF3FB30-278E-45E0-B6E5-D750AA327E66}
 		{C98976B3-F8CA-4DA0-AD78-86BDCAA8ED97} = {7D0FDB1D-6F38-47D9-A443-41F932792BD8}
 		{FD7575D0-668D-470B-8F56-51D8C29BE97B} = {7D0FDB1D-6F38-47D9-A443-41F932792BD8}

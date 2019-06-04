@@ -1,3 +1,3 @@
 export const formDataApiConfig = {
-    baseUrl: 'https://localhost:44387/api',
+    baseUrl: 'https://moviesapp12.azurewebsites.net',
 };
