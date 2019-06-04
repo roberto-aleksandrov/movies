@@ -27,7 +27,7 @@ const requestPayload = ({id, ...data}) => ({
     url: `movies/update/${id}`,
     onSuccess,
     onError,
-    data: {...data,  releaseDate: moment(data.releaseDate)}
+    data: {...data,  releaseDate: moment(data.releaseDate).format("YYYY-MM-DD HH:mm:ss")}
 });
 
 const requestMeta = { api: 'formDataApi' };

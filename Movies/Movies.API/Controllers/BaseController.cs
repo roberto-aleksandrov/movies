@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Movies.Infrastructure.Mediator.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Movies.WebUI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]/[action]")]
     public class BaseController : Controller

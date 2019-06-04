@@ -1,6 +1,7 @@
 using AutoMapper;
 using FluentValidation.AspNetCore;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -37,6 +38,16 @@ namespace Movies.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(sharedOptions =>
+            {
+                sharedOptions.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.Audience = Configuration["AzureAd:ClientId"];
+                options.Authority = $"{Configuration["AzureAd:Instance"]}{Configuration["AzureAd:TenantId"]}";
+            });
+
             services.AddCors(options =>
                options.AddPolicy("default",
                 builder =>
@@ -99,6 +110,7 @@ namespace Movies.API
                 c.RoutePrefix = string.Empty;
             });
 
+            app.UseAuthentication();
             app.UseCors("default");
             app.UseMvc();
         }

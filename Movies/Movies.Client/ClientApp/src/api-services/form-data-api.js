@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getToken } from '../utilities/authentication-configuration';
 
 const api = config => ({
     exec: ({method, data, url}) => {
@@ -13,7 +14,7 @@ const api = config => ({
             url: `${config.baseUrl}/${url}`,
             crossdomain: true,
             data: formData,
-            config: { headers: {'Content-Type': 'multipart/form-data' }}
+            headers: {'Content-Type': 'multipart/form-data', 'Authorization': ` bearer ${getToken()}`},
         });          
     }
 })

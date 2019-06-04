@@ -1,11 +1,13 @@
 import axios from 'axios';
+import { getToken } from '../utilities/authentication-configuration';
 
 const api = config => ({
-    exec: ({method, data, url}) => {
+    exec: ({method, data, url}) => {        
         const reqConfig = {
             method,
             url: `${config.baseUrl}/${url}`,
             crossdomain: true,
+            headers: {'Authorization': ` bearer ${getToken()}`}
         }
 
         if(method.toLowerCase() === 'get' || method.toLowerCase() === 'delete') {
