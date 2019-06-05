@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Movies.WebUI.Controllers
-{
+{ 
     [Authorize]
     [ApiController]
     [Route("api/[controller]/[action]")]
