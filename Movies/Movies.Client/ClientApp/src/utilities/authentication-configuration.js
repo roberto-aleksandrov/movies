@@ -8,7 +8,7 @@ const adalConfig = {
       api: 'https://my-org.onmicrosoft.com/5167abb2-b301-4d97-aeae-82aa72017b6d'
     },
     postLogoutRedirectUri: window.location.origin,
-    redirectUri: 'https://localhost:44326',
+    redirectUri: 'https://testdeployment1.azurewebsites.net',
     cacheLocation: 'localStorage'
 };
 
